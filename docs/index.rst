@@ -14,5 +14,5 @@ This documentation will guide you through all the features of ArcScript, from th
    language_basics
    control_flow
    functions
-   dom_manipulation (**)
+   dom_manipulation
    advanced_topics
