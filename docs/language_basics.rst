@@ -55,6 +55,7 @@ Standard operators for calculations.
 -   Subtraction: ``-``
 -   Multiplication: ``*``
 -   Division: ``/``
+-   Modulous: ``%``
 
 Comparison Operators
 --------------------

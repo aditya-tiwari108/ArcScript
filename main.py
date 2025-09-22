@@ -46,7 +46,7 @@ GRAMMAR = r'''
     append: "append" expression "to" expression
     insert: "insert" expression "before" expression "in" expression
 
-    OP: "+" | "-" | "*" | "/"
+    OP: "+" | "-" | "*" | "/" | "%"
     COMP_OP: "==" | "!=" | ">" | "<" | ">=" | "<="
     
     DEF.2: "def" | "fn" | "function"

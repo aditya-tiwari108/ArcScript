@@ -15,6 +15,16 @@ ArcScript is a Python script that uses the ``lark`` library for parsing.
     .. code-block:: bash
 
         pip install lark
+3. Install ArcScript using pip:
+    .. code-block:: bash
+
+        pip install ArcScript
+4. Alternatively, you can clone the repo using:
+    .. code-block:: bash
+
+        git clone https://github.com/aditya-tiwari108/ArcScript
+        python install -m requirements.txt
+
 
 Usage
 =====
@@ -65,7 +75,6 @@ This is useful for including libraries or writing complex JavaScript functions t
     [ARC]
     # This is ArcScript
     print("This message is from the console.")
-    showAlert("This message is from the alert box!")
 
 **Resulting ``app.js``:**
 
@@ -77,4 +86,3 @@ This is useful for including libraries or writing complex JavaScript functions t
     }
 
     console.log("This message is from the console.");
-    showAlert("This message is from the alert box!");
