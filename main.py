@@ -7,7 +7,7 @@ import sys
 GRAMMAR = r'''
     ?start: (_NL* (statement))* _NL*
 
-    statement: BREAK | print | var_dec | func_def | for_in_loop | for_range_loop | if_block | while_block | grab_set | append | insert | style_block | event | expression 
+    statement: BREAK | CONTINUE | print | var_dec | func_def | for_in_loop | for_range_loop | if_block | while_block | grab_set | append | insert | style_block | event | expression 
     
     BREAK: "break"
     CONTINUE: "continue"
