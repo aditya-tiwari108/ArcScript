@@ -1,1 +1,2 @@
-lark
+sphinx
+sphinx-rtd-theme
