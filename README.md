@@ -24,7 +24,7 @@ Install ArcScript with pip
 You can also clone it locally
 
 ```bash
-  git clone https://github.com/aditya-tiwari-108/ArcScript.git
+  git clone https://github.com/aditya-tiwari108/ArcScript.git
   cd ArcScript
   pip install -r requirements.txt
   python main.py input.ez output.js
@@ -32,5 +32,5 @@ You can also clone it locally
     
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+[ReadTheDocs] (https://arcscript.readthedocs.io/en/latest/index.html)
 

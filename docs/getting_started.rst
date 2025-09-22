@@ -23,7 +23,7 @@ ArcScript is a Python script that uses the ``lark`` library for parsing.
     .. code-block:: bash
 
         git clone https://github.com/aditya-tiwari108/ArcScript
-        python install -m requirements.txt
+        python install -r requirements.txt
 
 
 Usage
