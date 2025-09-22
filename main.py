@@ -7,8 +7,10 @@ import sys
 GRAMMAR = r'''
     ?start: (_NL* (statement))* _NL*
 
-    statement: print | var_dec | func_def | for_in_loop | for_range_loop | if_block | while_block | grab_set | append | insert | style_block | event | expression  
-
+    statement: BREAK | print | var_dec | func_def | for_in_loop | for_range_loop | if_block | while_block | grab_set | append | insert | style_block | event | expression 
+    
+    BREAK: "break"
+    CONTINUE: "continue"
     var_dec: NAME "=" expression
 
     print: "print" "(" [expression ("," expression)* ] ")"
@@ -27,7 +29,7 @@ GRAMMAR = r'''
 
     condition_group: expression (REL_OP expression)*
 
-    block_body: _INDENT (statement _NL*)+ _DEDENT
+    block_body: _INDENT ((statement| CONTROL_STATEMENT) _NL*)+ _DEDENT
     
     if_block: "if" condition_group _NL block_body _NL? else_block?
     else_block: "else" _NL block_body
@@ -41,14 +43,16 @@ GRAMMAR = r'''
     func_call: NAME "(" [expression ("," expression)*] ")"
 
     param_list: "(" [NAME ("," NAME)*] ")"
-
+    
     create: "create" STRING
     append: "append" expression "to" expression
     insert: "insert" expression "before" expression "in" expression
 
-    OP: "+" | "-" | "*" | "/" | "%"
+    OP: "+" | "-" | "*" | "/"
     COMP_OP: "==" | "!=" | ">" | "<" | ">=" | "<="
     
+    CONTROL_STATEMENT: "break" | "continue"
+
     DEF.2: "def" | "fn" | "function"
     REL_OP.2: "and" | "or" | "not" | "is" | "True" | "False"
     
@@ -257,6 +261,11 @@ class Converter(Transformer):
             else:
                 return (f"{selector}.addEventListener('{event_name}', {handler})")
  
+    def BREAK(self, token):
+        return token.value
+
+    def CONTINUE(self, token):
+        return token.value
 
     def create(self, tag):
         return f"document.createElement({tag})"
@@ -320,3 +329,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
