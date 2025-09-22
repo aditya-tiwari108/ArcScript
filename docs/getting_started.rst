@@ -9,18 +9,13 @@ Installation
 
 ArcScript is a Python script that uses the ``lark`` library for parsing.
 
-1.  **Ensure you have Python 3 installed.**
-2.  Install the required library:
+1.  **Ensure you have Python 3 and PIP installed.**
+2. Install ArcScript using pip:
+.. code-block:: bash
 
-    .. code-block:: bash
-
-        pip install lark
-3. Install ArcScript using pip:
-    .. code-block:: bash
-
-        pip install ArcScript
-4. Alternatively, you can clone the repo using:
-    .. code-block:: bash
+        pip install arcscript
+3. Alternatively, you can clone the repo using:
+.. code-block:: bash
 
         git clone https://github.com/aditya-tiwari108/ArcScript
         python install -r requirements.txt
@@ -29,7 +24,15 @@ ArcScript is a Python script that uses the ``lark`` library for parsing.
 Usage
 =====
 
-To transpile an ArcScript file (e.g., ``input.arc``) to JavaScript (e.g., ``output.js``), run the script from your terminal:
+To transpile an ArcScript file (e.g., ``input.arc``) to JavaScript (e.g., ``output.js``), run the script from your terminal
+
+If you have install the package using pip
+
+.. code-block:: bash
+
+    arcscript input.arc output.js
+
+If you have cloned repo locally and are in the root directory of the repo:
 
 .. code-block:: bash
 

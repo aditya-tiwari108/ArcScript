@@ -1,4 +1,3 @@
-
 # ArcScript
 
 ArcScript is a transpiled (source to source compiled) language that transpiles to JavaScript. It's a simple language that gets rid of JavaScript boilerplate for both regular syntax and DOM manipulation. 
@@ -18,7 +17,7 @@ Educators can use it as a teaching tool for children who have learnt HTML and CS
 Install ArcScript with pip
 
 ```bash
-  pip install ArcScript
+  pip install arcscript
 ```
 
 You can also clone it locally
@@ -27,10 +26,21 @@ You can also clone it locally
   git clone https://github.com/aditya-tiwari108/ArcScript.git
   cd ArcScript
   pip install -r requirements.txt
-  python main.py input.ez output.js
 ```
-    
+
+### Usage
+
+If you installed using pip
+```bash
+  arcscript input.arc output.js
+```
+
+If you cloned it locally (assuming you are in the root directory of repo)
+```bash
+  python main.py input.arc output.js
+```
+
 ## Documentation
 
-[ReadTheDocs] (https://arcscript.readthedocs.io/en/latest/index.html)
+[ReadTheDocs](https://arcscript.readthedocs.io/en/latest/index.html)
 
